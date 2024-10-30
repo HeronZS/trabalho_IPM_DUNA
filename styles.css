@@ -1,0 +1,423 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/*Parte introdutória*/
+
+.section-content{
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+
+.section-intro{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro{
+  background-image: url(img/wallpaperflare.com_wallpaper.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.duna{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 5s ease;
+}
+
+.duna h1{
+  color: black;
+  font-family: duna;
+  font-size: 200px;
+  text-shadow: 0 0 0.2em white, 0 0 0.2em white;
+  margin: 0;
+}
+
+.setaBaixo{
+  opacity: 0;
+  transition: 3s step-end;
+}
+
+.botao{
+  margin-top: 20px;          
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 40px;
+  border-radius: 50%;
+  background:rgba(251, 188, 30, 0);
+  border: 2px solid black;
+  animation: bounce 2s infinite;
+}
+
+/*Menu*/
+
+.section-menu{
+  background-image: url(img/black-dunes-minimal-website-background-picjumbo-com.jpeg);
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul{
+  margin-top: 30px;
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li a{
+  display: block;
+  padding: 2rem;
+  font-size: 1.8rem;
+  position: relative;
+  text-decoration: none;
+  font-family: duna;
+  color: black;
+}
+
+.menu ul li a::after{
+  content: '';
+  position:absolute;
+  bottom: 1rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: black;
+  box-shadow: 0 0 10px black;
+  transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after{
+    width: 50%;
+    left: 25%;
+}
+
+
+.section-menu div h1{
+  font-family: duna;
+  font-size: 90px;
+}
+
+.botaoMenu{
+  margin-top: 20px;          
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 40px;
+  border-radius: 50%;
+  background:rgba(251, 188, 30, 0);
+  border: 2px solid black;
+  animation: bounce 2s infinite;
+}
+
+
+/*Parte sobre o autor*/
+
+.autor{
+  display: flex;
+  align-items: center;
+  justify-content:end;
+  background-image: url(img/black-dunes-minimal-website-background-picjumbo-com.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.fotoAutor{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.fotoAutor img{
+  display: flex;
+  position: relative;
+  right: 300px;
+  bottom: 20px;
+  width: 150%;
+  border: 5px solid black;
+}
+
+.fotoAutor figure figcaption{
+  text-align: center;
+}
+
+.sobreAutor{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 15%;
+  align-items: center;
+  text-align: center;
+  padding:5rem 10rem
+}
+
+.sobreAutor h2{
+  text-align: center;
+  font-family: duna;
+  font-size: 50px;
+  color: black;
+  margin-bottom: 10px;
+  text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+}
+
+.sobreAutorTexto{
+  position: relative;
+  width: 50%;
+  color: black;
+  font-family: "Play", sans-serif;
+  text-align-last: left;
+  hyphens: auto;
+  text-align: justify;
+  font-size: 17px;
+  margin-top: 5%;
+  letter-spacing: 2px;
+}
+
+.botaoAutor{
+  margin-top: 20px;          
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 40px;
+  border-radius: 50%;
+  background:rgba(198, 218, 225, 0.41);
+  border: 2px solid black;
+  animation: bounce 2s infinite;
+}
+
+/*Parte sobre Arrakis*/
+
+.section-arrakis{
+  background-image: url(img/dune-planeta-arrakis-kosmos.jpg);
+}
+
+.arrakis{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 25%;
+  align-items: center;
+  text-align: center;
+  padding:5rem 10rem
+}
+
+.arrakis h2{
+  text-align: center;
+  font-family: duna;
+  font-size: 50px;
+  color: white;
+  text-shadow: 0 0 0.2em white, 0 0 0.2em white;
+}
+
+.arrakisTexto{
+  position: relative;
+  width: 50%;
+  color: white;
+  font-family: "Play", sans-serif;
+  text-align-last: left;
+  hyphens: auto;
+  text-align: justify;
+  font-size: 17px;
+  margin-top: 5%;
+  letter-spacing: 2px;
+}
+
+.botaoArrakis{
+  position: relative;
+  top: 10%;         
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 40px;
+  border-radius: 50%;
+  background:rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  animation: bounce 2s infinite;
+}
+
+/*Parte sobre os Fremen*/
+
+.section-fremen{
+  background-image: url(img/dune-2-2024-movies-1920x1080-13967.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.fremen{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 25%;
+  align-items: center;
+  text-align: center;
+  padding:5rem 10rem
+}
+
+.fremen h2{
+  text-align: center;
+  font-family: duna;
+  font-size: 50px;
+  color: black;
+  text-shadow: 0 0 0.2em white, 0 0 0.2em white;
+}
+
+.fremenTexto{
+  position: relative;
+  width: 50%;
+  color: white;
+  font-family: "Play", sans-serif;
+  text-align-last: left;
+  hyphens: auto;
+  text-align: justify;
+  font-size: 17px;
+  margin-top: 5%;
+  letter-spacing: 2px;
+}
+
+.botaoFremen{
+  position: relative;
+  top: 10%;   
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 40px;
+  border-radius: 50%;
+  background:rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  animation: bounce 2s infinite;
+}
+
+/* Parte sobre Lisan-Al-Gaib*/
+
+.section-lisan{
+  background-image: url(img/thumb-1920-1357302.jpeg);
+}
+
+.lisan{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 25%;
+  align-items: center;
+  text-align: center;
+  padding:5rem 10rem
+}
+
+.lisan h2{
+  text-align: center;
+  font-family: duna;
+  font-size: 50px;
+  color: white;
+  text-shadow: 0 0 0.2em white, 0 0 0.2em white;
+}
+
+.lisanTexto{
+  position: relative;
+  width: 50%;
+  color: white;
+  font-family: "Play", sans-serif;
+  text-align-last: left;
+  hyphens: auto;
+  text-align: justify;
+  font-size: 17px;
+  margin-top: 5%;
+  letter-spacing: 2px;
+}
+
+.botaoLisan{
+  position: relative;
+  top: 10%;   
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 40px;
+  border-radius: 50%;
+  background:rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  animation: bounce 2s infinite;
+}
+
+/*Parte do trailer do filme*/
+
+.section-filme{
+  background-image: url(img/1166940.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.divTrailer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botaoTrailer{
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px 20px 20px 20px;
+  font-family: duna;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.756);;
+  animation: bounce 3s infinite;
+}
+
+.botaoUp{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+.botaoReturn{
+  font-size: 50px;
+  border-radius: 50%;
+  padding: 10px 20px;
+  cursor: pointer;
+
+}
+
+@font-face {
+  font-family:duna;
+  src: url(/fonts/Dune_Rise.otf);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
