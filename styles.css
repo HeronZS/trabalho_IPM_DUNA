@@ -17,7 +17,6 @@ html{
   justify-content: space-between;
 }
 
-
 .section-intro{
   min-height: 100vh;
   display: flex;
@@ -314,6 +313,8 @@ html{
 
 .section-lisan{
   background-image: url(img/thumb-1920-1357302.jpeg);
+  background-size: cover;
+  background-position: center center;
 }
 
 .lisan{
@@ -420,4 +421,41 @@ html{
   50% {
     transform: translateY(-10px);
   }
+}
+
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
+  
+  .intro, .section-filme, .section-menu, .section-menu, .autor, .section-fremen{
+    background-size: cover;
+    background-position: center center;
+  }
+   
+  .menu div h1 {
+      font-size: 60px;
+  }
+
+  .menu ul li a {
+      font-size: 20px; /* Ajusta o tamanho das opções do menu (Intro, Autor, etc.) */
+      /* Reduz a margem entre os itens para economizar espaço horizontal */
+  }
+  .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .botaoReturn {
+      width: 40px;
+      height: 40px;
+  }
+
+  .botaoUp{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+  }
+
 }
