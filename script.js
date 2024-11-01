@@ -6,6 +6,19 @@ window.addEventListener("load", function() {
     setaBaixo.style.opacity = 1;
   });
 
+window.addEventListener('scroll', function() {
+    const botao = document.getElementById('botaoUp');
+    const menuSection = document.getElementById('menu');
+    
+    const menuBottomPosition = menuSection.offsetTop + menuSection.offsetHeight;
+  
+    if (window.scrollY >= menuBottomPosition) {
+      botao.classList.add('mostrarBotao');
+    } else {
+      botao.classList.remove('mostrarBotao');
+    }
+  });
+  
 
 document.getElementById("botao1").addEventListener("click", function(){
     const proxSection = document.getElementById("menu");
@@ -44,15 +57,13 @@ document.getElementById("botao6").addEventListener("click", function(){
     proxSection.scrollIntoView({behavior:"smooth"})
 });
 
+
+
 const botaoTrailer = document.getElementById('botaoTrailer');
 const videoContainer = document.getElementById('videoContainer');
 
 function gerarVideoDiv(){
-    if(document.getElementById('youtubeVideo')){
-        alert('O trailer já está sendo exibido!')
-        return
-    }
-
+   
     botaoTrailer.style.display = 'none';
 
     const videoDiv = document.createElement('div');
