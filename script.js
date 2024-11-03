@@ -6,6 +6,42 @@ window.addEventListener("load", function() {
     setaBaixo.style.opacity = 1;
   });
 
+
+  const audio = new Audio('music/dune-soundtrack.mp3');
+  audio.loop = true;
+
+  const botaoSom = document.querySelector('.botaoSom');
+  const botaoMudo = document.querySelector('.botaoMudo');
+
+  function ativarSom() {
+    audio.play().then(() => {
+      botaoSom.style.display = 'none';
+      botaoMudo.style.display = 'inline';
+    }).catch(error => {
+      console.error("Erro ao tentar reproduzir o áudio:", error);
+    });
+  }
+
+  function desativarSom() {
+    audio.pause();
+    botaoSom.style.display = 'inline';
+    botaoMudo.style.display = 'none';
+  }
+
+  botaoSom.addEventListener('click', ativarSom);
+  botaoMudo.addEventListener('click', desativarSom);
+
+  function iniciarSomNaInteracao() {
+    ativarSom();
+    window.removeEventListener('click', iniciarSomNaInteracao);
+    window.removeEventListener('keydown', iniciarSomNaInteracao);
+  }
+
+  window.addEventListener('click', iniciarSomNaInteracao);
+  window.addEventListener('keydown', iniciarSomNaInteracao);
+    
+
+
 window.addEventListener('scroll', function() {
     const botao = document.getElementById('botaoUp');
     const menuSection = document.getElementById('menu');
@@ -20,7 +56,9 @@ window.addEventListener('scroll', function() {
   });
   
 
-document.getElementById("botao1").addEventListener("click", function(){
+
+
+  document.getElementById("botao1").addEventListener("click", function(){
     const proxSection = document.getElementById("menu");
 
     proxSection.scrollIntoView({behavior:"smooth"})
@@ -59,6 +97,7 @@ document.getElementById("botao6").addEventListener("click", function(){
 
 
 
+
 const botaoTrailer = document.getElementById('botaoTrailer');
 const videoContainer = document.getElementById('videoContainer');
 
@@ -83,8 +122,9 @@ function gerarVideoDiv(){
     videoContainer.appendChild(videoDiv)
 
 }
+    botaoTrailer.addEventListener('click',gerarVideoDiv);
 
-botaoTrailer.addEventListener('click',gerarVideoDiv);
+
 
 
 document.getElementById("return").addEventListener("click", function(){

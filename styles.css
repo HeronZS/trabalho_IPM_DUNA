@@ -8,6 +8,24 @@ html{
   scroll-behavior: smooth;
 }
 
+
+.botaoAudio {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  background: none;
+  border: none;
+}
+
+.iconSom, .iconMudo {
+  width: 100%;
+  height: auto;
+}
+
 /*Parte introdutória*/
 
 .section-content{
@@ -62,6 +80,11 @@ html{
   background:rgba(251, 188, 30, 0);
   border: 2px solid black;
   animation: bounce 2s infinite;
+}
+
+.botao:hover{
+  box-shadow: 0 0 20px black;
+  text-shadow: 0 0 20px black;
 }
 
 /*Menu*/
@@ -133,6 +156,11 @@ html{
   animation: bounce 2s infinite;
 }
 
+.botaoMenu:hover{
+  box-shadow: 0 0 20px black;
+  text-shadow: 0 0 20px black;
+}
+
 
 /*Parte sobre o autor*/
 
@@ -197,7 +225,7 @@ html{
 }
 
 .botaoAutor{
-  margin-top: 20px;          
+  margin-top: 30px;          
   padding: 10px 20px;
   cursor: pointer;
   font-size: 40px;
@@ -205,6 +233,11 @@ html{
   background:rgba(198, 218, 225, 0.41);
   border: 2px solid black;
   animation: bounce 2s infinite;
+}
+
+.botaoAutor:hover{
+  box-shadow: 0 0 20px black;
+  text-shadow: 0 0 20px black;
 }
 
 /*Parte sobre Arrakis*/
@@ -217,7 +250,7 @@ html{
   display: flex;
   flex-direction: column;
   position: relative;
-  right: 25%;
+  right: 30%;
   align-items: center;
   text-align: center;
   padding:5rem 10rem
@@ -233,7 +266,7 @@ html{
 
 .arrakisTexto{
   position: relative;
-  width: 50%;
+  width: 30%;
   color: white;
   font-family: "Play", sans-serif;
   text-align-last: left;
@@ -255,6 +288,11 @@ html{
   background:rgba(255, 255, 255, 0);
   border: 2px solid white;
   animation: bounce 2s infinite;
+}
+
+.botaoArrakis:hover{
+  box-shadow: 0 0 20px white;
+  text-shadow: 0 0 20px white;
 }
 
 /*Parte sobre os Fremen*/
@@ -294,6 +332,7 @@ html{
   font-size: 17px;
   margin-top: 5%;
   letter-spacing: 2px;
+  text-shadow: 1px 1px 15px black;
 }
 
 .botaoFremen{
@@ -307,6 +346,11 @@ html{
   background:rgba(255, 255, 255, 0);
   border: 2px solid white;
   animation: bounce 2s infinite;
+}
+
+.botaoFremen:hover{
+  box-shadow: 0 0 20px white;
+  text-shadow: 0 0 20px white;
 }
 
 /* Parte sobre Lisan-Al-Gaib*/
@@ -346,6 +390,7 @@ html{
   font-size: 17px;
   margin-top: 5%;
   letter-spacing: 2px;
+  text-shadow: 1px 1px 15px black;
 }
 
 .botaoLisan{
@@ -361,18 +406,21 @@ html{
   animation: bounce 2s infinite;
 }
 
+.botaoLisan:hover{
+  box-shadow: 0 0 20px white;
+  text-shadow: 0 0 20px white;
+}
+
 /*Parte do trailer do filme*/
 
 .section-filme{
   background-image: url(img/1166940.jpg);
   background-size: cover;
   background-position: center center;
-  position: relative;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
 }
+
 
 .divTrailer{
   display: flex;
@@ -410,6 +458,11 @@ html{
   font-size: 30px;
   border-radius: 50%;
   cursor: pointer;
+  border: 2px solid black;
+}
+
+.botaoReturn:hover{
+  border: 5px solid black;
 }
 
 .mostrarBotao{
