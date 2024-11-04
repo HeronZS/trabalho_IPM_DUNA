@@ -78,18 +78,12 @@ document.getElementById("botaoMenu").addEventListener("click", function(){
 });
 
 document.getElementById("botaoAutor").addEventListener("click", function(){
-    const proxSection = document.getElementById("casas");
-
-    proxSection.scrollIntoView({behavior:"smooth"})
-});
-
-document.getElementById("botaoCasas").addEventListener("click", function(){ //FAZER DEPOIS
     const proxSection = document.getElementById("arrakis");
 
     proxSection.scrollIntoView({behavior:"smooth"})
 });
 
-document.getElementById("botaoArrakis").addEventListener("click", function(){
+document.getElementById("botaoArrakis").addEventListener("click", function(){ //FAZER DEPOIS
     const proxSection = document.getElementById("fremen");
 
     proxSection.scrollIntoView({behavior:"smooth"})
@@ -105,20 +99,6 @@ document.getElementById("botaoLisan").addEventListener("click", function(){
     const proxSection = document.getElementById("trailer");
 
     proxSection.scrollIntoView({behavior:"smooth"})
-});
-
-
-//FUNCTION PARA QUE O TÍTULO "CASAS IMPERIAIS" APAREÇA E DESAPAREÇA
-
-
-window.addEventListener("scroll", function() {
-    const harkonnen = document.querySelector(".harkonnen");
-    const atreides = document.querySelector(".atreides");
-    const corrino = document.querySelector(".corrino");
-    harkonnen.style.opacity = 1;
-    atreides.style.opacity = 1;
-    corrino.style.opacity = 1;
-
 });
 
 
@@ -148,7 +128,6 @@ function gerarVideoDiv(){
     videoContainer.appendChild(videoDiv)
 }
     botaoTrailer.addEventListener('click',gerarVideoDiv);
-
 
 
 //FUNCTION QUE LEVA O USUÁRIO DE VOLTA AO MENU AO PRESSIONAR O BOTÃO ⮝

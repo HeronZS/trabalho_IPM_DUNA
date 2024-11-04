@@ -248,80 +248,6 @@ html{
   text-shadow: 0 0 20px black;
 }
 
-/*Parte sobre as casas de Duna*/
-
-.section-casas{
-  background-image: url(/img/1242641.jpg);
-  background-size: cover;
-  background-position: center center;
-  justify-content: space-around;
-  padding: 20px;
-  }
-
-  .casasTitulo h2{
-    font-family: duna;
-    font-size: 40px;
-    color: white;
-  }
-/*
-  .harkonnen{
-    opacity: 0;
-    transition: opacity 5s ease;
-  }
-  .atreides{
-    opacity: 0;
-    transition: opacity 8s ease;
-  }
-  .corrino{
-    opacity: 0;
-    transition: opacity 11s ease;
-  }
-*/ 
-  .harkonnen, .atreides, .corrino{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    width: 33%;
-    }
-
-  .harkonnen h3, .atreides h3, .corrino h3{
-    font-size: 20px;
-    font-family: duna;
-    margin-bottom: 10px;
-    text-align: center;
-    margin-top: 100px;
-    text-shadow: 0 0 20px white, 0 0 20px white;
-  }
-
-  .harkonnen p, .atreides p, .corrino p{
-    font-family: "Play", serif;
-    font-size: 18px;
-    margin-top: 500px;
-    width: 80%;
-    justify-content: center;
-    text-align: justify;
-  }
-
-  .atreides h2{
-    font-family: duna;
-    font-size: 36px;
-    text-shadow: 0 0 12px white, 0 0 12px white;
-    padding-top: 10px;
-  }
-
-  .botaoCasas{ 
-    padding-top: 10px;      
-    cursor: pointer;
-    color: white;
-    font-size: 30px;
-    background:rgba(255, 255, 255, 0);
-    border: none;
-    animation: bounce 2s infinite;
-  }
-
 
 /*Parte sobre Arrakis*/
 
@@ -602,7 +528,7 @@ html{
 @media screen and (max-width: 1024px) and (max-height: 768px){
 
  .menu ul li a {
-  font-size:1rem;
+  font-size:0.8rem;
  }
 
  .sobreAutorTexto{
@@ -616,6 +542,10 @@ html{
   left: 100px;
   bottom: 20px;
   width: 150%;
+ }
+
+ .arrakis{
+  margin-left: 10%;
  }
 
  .arrakisTexto{
