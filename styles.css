@@ -527,6 +527,15 @@ html{
 
 @media screen and (max-width: 1024px) and (max-height: 768px){
 
+  .section-content{
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .duna h1{
+    font-size: 100px;
+  }
+
  .menu ul li a {
   font-size:0.8rem;
  }
