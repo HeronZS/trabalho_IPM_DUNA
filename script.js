@@ -1,11 +1,16 @@
-window.addEventListener("load", function() {
-    const duna = document.querySelector(".duna");
-    const setaBaixo = document.querySelector(".setaBaixo");
-  
-    duna.style.opacity = 1;
-    setaBaixo.style.opacity = 1;
-  });
 
+//FUNCTION PARA EXIBIR O TÍTULO COM EFEITO DE ESMAECER E A PRIMEIRA SETA
+
+    window.addEventListener("load", function() {
+        const duna = document.querySelector(".duna");
+        const setaBaixo = document.querySelector(".setaBaixo");
+    
+        duna.style.opacity = 1;
+        setaBaixo.style.opacity = 1;
+    });
+
+
+//FUNCTION PARA INICIAR E ATIVAR/DESATIVAR A MÚSICA DE FUNDO DO SITE
 
   const audio = new Audio('music/dune-soundtrack.mp3');
   audio.loop = true;
@@ -13,34 +18,35 @@ window.addEventListener("load", function() {
   const botaoSom = document.querySelector('.botaoSom');
   const botaoMudo = document.querySelector('.botaoMudo');
 
-  function ativarSom() {
-    audio.play().then(() => {
-      botaoSom.style.display = 'none';
-      botaoMudo.style.display = 'inline';
-    }).catch(error => {
-      console.error("Erro ao tentar reproduzir o áudio:", error);
-    });
-  }
+    function ativarSom() {
+        audio.play().then(() => {
+        botaoSom.style.display = 'none';
+        botaoMudo.style.display = 'inline';
+        }).catch(error => {
+        console.error("Não foi possível reproduzir o áudio", error);
+        });
+    }
 
-  function desativarSom() {
-    audio.pause();
-    botaoSom.style.display = 'inline';
-    botaoMudo.style.display = 'none';
-  }
+    function desativarSom() {
+        audio.pause();
+        botaoSom.style.display = 'inline';
+        botaoMudo.style.display = 'none';
+    }
 
-  botaoSom.addEventListener('click', ativarSom);
-  botaoMudo.addEventListener('click', desativarSom);
+    botaoSom.addEventListener('click', ativarSom);
+    botaoMudo.addEventListener('click', desativarSom);
 
-  function iniciarSomNaInteracao() {
-    ativarSom();
-    window.removeEventListener('click', iniciarSomNaInteracao);
-    window.removeEventListener('keydown', iniciarSomNaInteracao);
-  }
+    function iniciarSomNaInteracao() {
+        ativarSom();
+        window.removeEventListener('click', iniciarSomNaInteracao);
+        window.removeEventListener('keydown', iniciarSomNaInteracao);
+    }
 
-  window.addEventListener('click', iniciarSomNaInteracao);
-  window.addEventListener('keydown', iniciarSomNaInteracao);
+    window.addEventListener('click', iniciarSomNaInteracao);
+    window.addEventListener('keydown', iniciarSomNaInteracao);
     
 
+//FUNCTION QUE MOSTRA O BOTÃO DE VOLTAR AO TOPO QUANDO O USUÁRIO ULTRAPASSA A TELA DE MENU
 
 window.addEventListener('scroll', function() {
     const botao = document.getElementById('botaoUp');
@@ -56,47 +62,67 @@ window.addEventListener('scroll', function() {
   });
   
 
+//FUNCTIONS QUE LEVAM O USUÁRIO A PRÓXIMA SECTION AO PRESSIONAR O BOTÃO ⮟
 
 
-  document.getElementById("botao1").addEventListener("click", function(){
+document.getElementById("botaoIntro").addEventListener("click", function(){
     const proxSection = document.getElementById("menu");
 
     proxSection.scrollIntoView({behavior:"smooth"})
 });
 
-
-document.getElementById("botao2").addEventListener("click", function(){
-    const proxSection = document.getElementById("conteudo1");
-
-    proxSection.scrollIntoView({behavior:"smooth"})
-});
-
-document.getElementById("botao3").addEventListener("click", function(){
-    const proxSection = document.getElementById("conteudo2");
+document.getElementById("botaoMenu").addEventListener("click", function(){
+    const proxSection = document.getElementById("autor");
 
     proxSection.scrollIntoView({behavior:"smooth"})
 });
 
-document.getElementById("botao4").addEventListener("click", function(){
-    const proxSection = document.getElementById("conteudo3");
+document.getElementById("botaoAutor").addEventListener("click", function(){
+    const proxSection = document.getElementById("casas");
 
     proxSection.scrollIntoView({behavior:"smooth"})
 });
 
-document.getElementById("botao5").addEventListener("click", function(){
-    const proxSection = document.getElementById("conteudo4");
+document.getElementById("botaoCasas").addEventListener("click", function(){ //FAZER DEPOIS
+    const proxSection = document.getElementById("arrakis");
 
     proxSection.scrollIntoView({behavior:"smooth"})
 });
 
-document.getElementById("botao6").addEventListener("click", function(){
+document.getElementById("botaoArrakis").addEventListener("click", function(){
+    const proxSection = document.getElementById("fremen");
+
+    proxSection.scrollIntoView({behavior:"smooth"})
+});
+
+document.getElementById("botaoFremen").addEventListener("click", function(){
+    const proxSection = document.getElementById("lisan");
+
+    proxSection.scrollIntoView({behavior:"smooth"})
+});
+
+document.getElementById("botaoLisan").addEventListener("click", function(){
     const proxSection = document.getElementById("trailer");
 
     proxSection.scrollIntoView({behavior:"smooth"})
 });
 
 
+//FUNCTION PARA QUE O TÍTULO "CASAS IMPERIAIS" APAREÇA E DESAPAREÇA
 
+
+window.addEventListener("scroll", function() {
+    const harkonnen = document.querySelector(".harkonnen");
+    const atreides = document.querySelector(".atreides");
+    const corrino = document.querySelector(".corrino");
+    harkonnen.style.opacity = 1;
+    atreides.style.opacity = 1;
+    corrino.style.opacity = 1;
+
+});
+
+
+//FUNCTION PARA GERAR UMA DIV CONTENDO O TRAILER DO FILME DUNA
 
 const botaoTrailer = document.getElementById('botaoTrailer');
 const videoContainer = document.getElementById('videoContainer');
@@ -120,12 +146,12 @@ function gerarVideoDiv(){
     videoDiv.appendChild(iframe)
 
     videoContainer.appendChild(videoDiv)
-
 }
     botaoTrailer.addEventListener('click',gerarVideoDiv);
 
 
 
+//FUNCTION QUE LEVA O USUÁRIO DE VOLTA AO MENU AO PRESSIONAR O BOTÃO ⮝
 
 document.getElementById("return").addEventListener("click", function(){
     const inicio = document.getElementById("menu");

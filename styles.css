@@ -8,22 +8,30 @@ html{
   scroll-behavior: smooth;
 }
 
+/*Controle da música de fundo*/
 
 .botaoAudio {
   position: fixed;
-  top: 10px;
-  left: 10px;
-  width: 30px;
-  height: 30px;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   z-index: 1000;
   background: none;
-  border: none;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.361);
 }
 
 .iconSom, .iconMudo {
   width: 100%;
   height: auto;
+}
+
+.botaoAudio:hover{
+  box-shadow: 0 0 10px black;
 }
 
 /*Parte introdutória*/
@@ -115,7 +123,7 @@ html{
 .menu ul li a{
   display: block;
   padding: 2rem;
-  font-size: 1.8rem;
+  font-size: 24px;
   position: relative;
   text-decoration: none;
   font-family: duna;
@@ -240,6 +248,81 @@ html{
   text-shadow: 0 0 20px black;
 }
 
+/*Parte sobre as casas de Duna*/
+
+.section-casas{
+  background-image: url(/img/1242641.jpg);
+  background-size: cover;
+  background-position: center center;
+  justify-content: space-around;
+  padding: 20px;
+  }
+
+  .casasTitulo h2{
+    font-family: duna;
+    font-size: 40px;
+    color: white;
+  }
+/*
+  .harkonnen{
+    opacity: 0;
+    transition: opacity 5s ease;
+  }
+  .atreides{
+    opacity: 0;
+    transition: opacity 8s ease;
+  }
+  .corrino{
+    opacity: 0;
+    transition: opacity 11s ease;
+  }
+*/ 
+  .harkonnen, .atreides, .corrino{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    width: 33%;
+    }
+
+  .harkonnen h3, .atreides h3, .corrino h3{
+    font-size: 20px;
+    font-family: duna;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 100px;
+    text-shadow: 0 0 20px white, 0 0 20px white;
+  }
+
+  .harkonnen p, .atreides p, .corrino p{
+    font-family: "Play", serif;
+    font-size: 18px;
+    margin-top: 500px;
+    width: 80%;
+    justify-content: center;
+    text-align: justify;
+  }
+
+  .atreides h2{
+    font-family: duna;
+    font-size: 36px;
+    text-shadow: 0 0 12px white, 0 0 12px white;
+    padding-top: 10px;
+  }
+
+  .botaoCasas{ 
+    padding-top: 10px;      
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    background:rgba(255, 255, 255, 0);
+    border: none;
+    animation: bounce 2s infinite;
+  }
+
+
 /*Parte sobre Arrakis*/
 
 .section-arrakis{
@@ -275,6 +358,7 @@ html{
   font-size: 17px;
   margin-top: 5%;
   letter-spacing: 2px;
+  text-shadow: 1px 1px 15px black;
 }
 
 .botaoArrakis{
@@ -318,7 +402,7 @@ html{
   font-family: duna;
   font-size: 50px;
   color: black;
-  text-shadow: 0 0 0.2em white, 0 0 0.2em white;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.545), 0 0 0.2em rgba(0, 0, 0, 0.545);
 }
 
 .fremenTexto{
@@ -421,11 +505,11 @@ html{
   align-items: center;
 }
 
-
 .divTrailer{
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .botaoTrailer{
@@ -436,10 +520,12 @@ html{
   font-size: 30px;
   font-weight: bold;
   padding: 20px 20px 20px 20px;
-  font-family: duna;
+  font-family: "Outfit", serif;
+  font-weight: 300;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 50px;
   background: rgba(255, 255, 255, 0.756);;
+  text-shadow: 1px 1px 15px black;
   animation: bounce 3s infinite;
 }
 
@@ -470,6 +556,8 @@ html{
   opacity: 1;
 }
 
+/*Animações e fonte*/
+
 @font-face {
   font-family:duna;
   src: url(/fonts/Dune_Rise.otf);
@@ -483,6 +571,7 @@ html{
     transform: translateY(-10px);
   }
 }
+
 
 /*RESPONSIVIDADE*/
 
