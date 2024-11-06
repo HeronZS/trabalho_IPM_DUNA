@@ -36,14 +36,14 @@
     botaoSom.addEventListener('click', ativarSom);
     botaoMudo.addEventListener('click', desativarSom);
 
-    function iniciarSomNaInteracao() {
+    function iniciarSom() {
         ativarSom();
-        window.removeEventListener('click', iniciarSomNaInteracao);
-        window.removeEventListener('keydown', iniciarSomNaInteracao);
+        window.removeEventListener('click', iniciarSom);
+        window.removeEventListener('keydown', iniciarSom);
     }
 
-    window.addEventListener('click', iniciarSomNaInteracao);
-    window.addEventListener('keydown', iniciarSomNaInteracao);
+    window.addEventListener('click', iniciarSom);
+    window.addEventListener('keydown', iniciarSom);
     
 
 //FUNCTION QUE MOSTRA O BOTÃO DE VOLTAR AO TOPO QUANDO O USUÁRIO ULTRAPASSA A TELA DE MENU
