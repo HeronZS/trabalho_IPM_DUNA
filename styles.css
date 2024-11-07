@@ -510,6 +510,75 @@ html{
 
 /*RESPONSIVIDADE*/
 
+@media screen and (max-width: 1280px){
+
+  .menu ul li a {
+    font-size:20px;
+   }
+
+  .sobreAutor{
+    position: relative;
+    top: 100px;
+    right: 100px;
+   }
+  
+   .sobreAutorTexto{
+    width: 80%;
+    margin-bottom: 50%;
+   }
+
+  .fotoAutor{
+    display: flex;
+    position: relative;
+    bottom: 45px;
+    left: 250px;
+    width: 100%;
+   }
+
+   .botaoAutor{
+    display: flex;
+    position: relative;
+    right: 40rem;
+    background:rgba(198, 218, 225, 0.804);
+  }
+
+  .arrakis{
+    margin-top: 10rem;
+    display: flex;
+    position: relative;
+    left: 10px;
+  }
+
+  .arrakisTexto{
+    width: 80%;
+
+  }
+
+  .fremen{
+    margin-top: 10rem;
+    display: flex;
+    position: relative;
+    left: 10px;
+  }
+
+  .fremenTexto{
+    width: 80%;
+  }
+
+  .lisan{
+    margin-top: 15rem;
+    display: flex;
+    position: relative;
+    left: 10px;
+  }
+
+  .lisanTexto{
+    width: 80%;
+  }
+
+}
+
+
 @media screen and (max-width: 1024px){
 
  .section-content{
@@ -540,13 +609,13 @@ html{
 .botaoAutor{
   display: flex;
   position: relative;
-  right: 10px;
+  right: 20px;
   background:rgba(198, 218, 225, 0.661);
 }
  .fotoAutor{
   display: flex;
   position: relative;
-  top: 20px;
+  top: 30px;
   left: 250px;
   width: 150%;
  }
@@ -614,3 +683,107 @@ html{
 
 }
 
+@media screen and (max-width: 650px){
+
+  .duna h1{
+    font-size: 80px;
+   }
+
+  .menu ul{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .botaoMenu{
+    color: white;
+    margin-top: 20px;          
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 40px;
+    border-radius: 50%;
+    background:rgba(251, 188, 30, 0);
+    border: 2px solid white;
+    animation: bounce 2s infinite;
+  }
+  
+  .botaoMenu:hover{
+    box-shadow: 0 0 20px white;
+    text-shadow: 0 0 20px white;
+  }
+
+  .autor{
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fotoAutor{
+    width: 40%;
+  }
+
+  .fotoAutor img{
+    display: flex;
+    right: 15rem;
+    bottom: 15rem;
+  }
+
+  .botaoAutor{
+    display: flex;
+    position: relative;
+    left: 1rem;
+    background:rgba(198, 218, 225, 0.804);
+  }
+
+  .section-arrakis{
+    background-position: 30%;
+  }
+
+  .arrakis{
+    width: 150%;
+    display: flex;
+    flex-direction: column;
+    left: -12rem;
+    bottom: 10rem;
+  }
+
+
+  .fremen{
+    width: 150%;
+    display: flex;
+    flex-direction: column;
+    left: -8rem;
+    bottom: 10rem;
+  }
+
+  .fremenTexto{
+    width: 100%;
+  }
+
+  .botaoFremen{
+    display: flex;
+    position: relative;
+    left: 2rem;
+  }
+
+  .section-lisan{
+    background-position: 70%;
+  }
+
+  .lisan{
+    width: 150%;
+    display: flex;
+    flex-direction: column;
+    left: -5rem;
+  }
+
+  .lisanTexto{
+    width: 120%;
+  }
+
+  .botaoLisan{
+    display: flex;
+    position: relative;
+    left: 1.5rem;
+  }
+
+}

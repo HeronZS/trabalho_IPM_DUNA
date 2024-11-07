@@ -113,8 +113,8 @@ function gerarVideoDiv(){
     videoDiv.id = 'youtubeVideo';
 
     const iframe = document.createElement('iframe');
-    iframe.width = '1120px';
-    iframe.height = '630px';
+    iframe.width = '896px';
+    iframe.height = '504px';
     iframe.src = 'https://www.youtube.com/embed/n9xhJrPXop4'
     iframe.title = 'Trailer Duna';
     iframe.border = '0';
