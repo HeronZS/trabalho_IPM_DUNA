@@ -8,7 +8,8 @@ html{
   scroll-behavior: smooth;
 }
 
-/*Controle da música de fundo*/
+
+/*CONTROLE DA MÚSICA DE AMBIENTAÇÃO*/
 
 .botaoAudio {
   position: fixed;
@@ -34,7 +35,8 @@ html{
   box-shadow: 0 0 10px black;
 }
 
-/*Parte introdutória*/
+
+/*PARTE INTRODUTÓRIA*/
 
 .section-content{
   min-height: 100vh;
@@ -95,7 +97,8 @@ html{
   text-shadow: 0 0 20px black;
 }
 
-/*Menu*/
+
+/*MENU*/
 
 .section-menu{
   background-image: url(img/black-dunes-minimal-website-background-picjumbo-com.jpeg);
@@ -147,7 +150,6 @@ html{
     left: 25%;
 }
 
-
 .section-menu div h1{
   font-family: duna;
   font-size: 90px;
@@ -170,7 +172,7 @@ html{
 }
 
 
-/*Parte sobre o autor*/
+/*SECTION SOBRE O AUTOR*/
 
 .autor{
   display: flex;
@@ -194,6 +196,11 @@ html{
   bottom: 20px;
   width: 150%;
   border: 5px solid black;
+  transition: all 300ms ease-in-out;
+}
+
+.fotoAutor img:hover{
+  transform: translate(-0.5%, 0.5%) scale(1.1);
 }
 
 .sobreAutor{
@@ -248,7 +255,7 @@ html{
 }
 
 
-/*Parte sobre Arrakis*/
+/*SECTION SOBRE O PLANETA ARRAKIS*/
 
 .section-arrakis{
   background-image: url(img/dune-planeta-arrakis-kosmos.jpg);
@@ -304,7 +311,8 @@ html{
   text-shadow: 0 0 20px white;
 }
 
-/*Parte sobre os Fremen*/
+
+/*SECTION SOBRE OS FREMEN*/
 
 .section-fremen{
   background-image: url(img/dune-2-2024-movies-1920x1080-13967.jpg);
@@ -362,7 +370,8 @@ html{
   text-shadow: 0 0 20px white;
 }
 
-/* Parte sobre Lisan-Al-Gaib*/
+
+/*SECTION SOBRE LISAN-AL-GAIB*/
 
 .section-lisan{
   background-image: url(img/thumb-1920-1357302.jpeg);
@@ -420,7 +429,7 @@ html{
   text-shadow: 0 0 20px white;
 }
 
-/*Parte do trailer do filme*/
+/*SECTION DO TRAILER DO FILME DUNE*/
 
 .section-filme{
   background-image: url(img/1166940.jpg);
@@ -481,7 +490,7 @@ html{
   opacity: 1;
 }
 
-/*Animações e fonte*/
+/*ANIMAÇÕES E FONTE*/
 
 @font-face {
   font-family:duna;

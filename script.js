@@ -1,4 +1,3 @@
-
 //FUNCTION PARA EXIBIR O TÍTULO COM EFEITO DE ESMAECER E A PRIMEIRA SETA
 
     window.addEventListener("load", function() {
@@ -64,7 +63,6 @@ window.addEventListener('scroll', function() {
 
 //FUNCTIONS QUE LEVAM O USUÁRIO A PRÓXIMA SECTION AO PRESSIONAR O BOTÃO ⮟
 
-
 document.getElementById("botaoIntro").addEventListener("click", function(){
     const proxSection = document.getElementById("menu");
 
@@ -102,7 +100,7 @@ document.getElementById("botaoLisan").addEventListener("click", function(){
 });
 
 
-//FUNCTION PARA GERAR UMA DIV CONTENDO O TRAILER DO FILME DUNA
+//FUNCTION PARA GERAR UMA DIV QUE CONTÉM O TRAILER DO FILME DUNA
 
 const botaoTrailer = document.getElementById('botaoTrailer');
 const videoContainer = document.getElementById('videoContainer');
